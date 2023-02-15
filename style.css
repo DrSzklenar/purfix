@@ -6,88 +6,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,
+audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -96,18 +16,15 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display: block;
+}
+
+a{
+
+    color: var(--szin4);
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -156,7 +73,7 @@ table {
 
     --szin2: #42855b;
     --szin3: #5a724e;
-    --szin4: #D2D79F;
+    --szin4: #d2d79f;
 
 }
 
@@ -175,16 +92,9 @@ body {
 
 /* #endregion */
 
-
-
-
-
 span {
     display: block;
 }
-
-
-
 
 footer {
     background-color: var(--szin2);
@@ -193,8 +103,33 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 3vh;
-    height: 30vh;
+    padding: 1rem;
+}
 
+.kapcsolat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.kapcsolat .flexcol{
+    gap: 0.5rem;
+}
+
+.kapcsolat i{
+    margin-right: 0.5rem;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    width: 70%;
+    border-top: 2px solid var(--szin4);
 }
 
 main {
@@ -203,8 +138,6 @@ main {
 }
 
 section {}
-
-
 
 p {
     font-size: 0.8rem;
@@ -216,7 +149,6 @@ li {
 }
 
 a {
-    width: 100%;
     height: 100%;
 }
 
@@ -227,24 +159,48 @@ input {
     padding: 10px;
     color: var(--szin4);
     font-size: 1rem;
-    margin: 5px;
+
 }
 
-img,
-a,
-li,
-input {
+select,input {
+    margin: 10px;
+}
+
+img,a,li,input {
     user-select: none;
 }
 
 
-.purhabszigeteles{
-    border-top: 1rem solid var(--szin2);
+#tajekoztato{
+    position: fixed;
+    right: 0px;
+    bottom: 0vh;
+    max-height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%); 
+    z-index: 79;
+    text-align: center;
+    background-color: #90B77D;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
 }
 
+
+.animation{
+    transform: translateX(0%) !important; 
+}
+
+
+
+/* .purhabszigeteles{
+    border-top: 1rem solid var(--szin2);
+} */
+
 /* tags end */
-
-
 
 /* #region navbarthings */
 
@@ -252,21 +208,15 @@ input {
 #hamburger-lines.menushown span:nth-child(1) {
     transform: rotate(-45deg);
 }
-
 #hamburger-lines.menushown span:nth-child(2) {
     width: 0rem;
-
 }
-
 #hamburger-lines.menushown span:nth-child(3) {
     transform: rotate(45deg);
 }
-
-
 #hamburger-lines {
     display: none;
 }
-
 #hamburger-lines span {
     width: 1.4rem;
     height: 0.2rem;
@@ -277,8 +227,8 @@ input {
     transition-property: transform, width;
     transform-origin: right center;
 }
-
 /*#endregion burgir end */
+
 
 nav {
     display: flex;
@@ -294,22 +244,23 @@ nav {
 }
 
 
+
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    font-size: 1.2rem;
+    gap: 2vw;
+    font-size: 2rem;
     color: var(--szin4);
     margin-left: 100px;
-
 }
 
-
-#menu.menushown {}
-
-
+.logo img{
+    height: 80%;
+    box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+}
 
 #menu li {
     font-size: 1rem;
@@ -323,14 +274,12 @@ nav {
     background-color: var(--szin3);
 }
 
-#menu a,
-#menu li {
+#menu a,#menu li {
     display: flex;
     align-items: center;
     color: var(--szin4);
     text-decoration: none;
     list-style: none;
-
 }
 
 .menu-button {
@@ -352,7 +301,6 @@ nav {
     display: flex;
     flex-direction: row;
     height: 100%;
-
 }
 
 .menupoint {
@@ -360,10 +308,19 @@ nav {
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 0 2vw 0 2vw;
 }
 
+.menupoint a{
+    padding: 0 2vw 0 2vw;
+    
+}
+
+
+
 /*#endregion */
+
+
+
 
 
 /* kep */
@@ -372,14 +329,10 @@ nav {
 }
 
 .parallax {
-    /* The image used */
-    /* background-image: url("https://cdn.discordapp.com/attachments/577197842716688415/1062416446375874661/IMG-20230103-WA0027.jpg"); */
-    background-image: url("https://img.freepik.com/premium-photo/wall-apartment-building-covered-with-insulation-foam-before_73110-4700.jpg?w=2000");
-
+    background-image: url("https://cdn.discordapp.com/attachments/577197842716688415/1073638102503010385/bannerkap.png");
     /* Set a specific height */
     min-height: 100vh;
     -webkit-filter: blur(2px);
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -389,9 +342,7 @@ nav {
 }
 
 .parallax2 {
-    /* The image used */
-    background-image: url("https://cdn.discordapp.com/attachments/577197842716688415/1062416446375874661/IMG-20230103-WA0027.jpg");
-
+    background-image: url("https://cdn.discordapp.com/attachments/577197842716688415/1074797430974976101/Foam-vs-Insulation-Batts.jpg");
     /* Set a specific height */
     position: absolute;
     min-height: 65vh;
@@ -410,7 +361,6 @@ nav {
     right: 0px;
 }
 
-
 #intro {
     place-self: center;
     position: absolute;
@@ -420,135 +370,35 @@ nav {
     align-items: center;
     gap: 2vh;
     font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
 }
 
+#intro *{
+    text-align: center;
+}
+
+.TelEmail{
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
 /* kep end */
 
 
-/* continer */
+
+/* #region homepage */
 #homePage {
     position: relative;
     align-items: center;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: calc(15vh + 10vh);
     min-height: 100vh;
     /* background-color: #2b2121; */
     font-size: 2rem;
 }
-
-
-
-
-
-/* #region kalkulator */
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 10vh 15vw;
-
-    padding: 0px 5vw 0px 0px;
-}
-
-label {
-    text-align: center;
-}
-
-.banner {
-    text-align: center;
-    position: absolute;
-    top: 18vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#kalkulator {
-    min-height: 100vh;
-    justify-content: flex-end;
-    /* background-color: #2b2121; */
-    font-size: 2rem;
-    width: 100%;
-    position: relative;
-}
-
-
-
-/* #endregion */
-
-
-
-/* #region uertektablazat */
-
-#uertektablazat {
-    position: relative;
-    gap: 5vh;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--szin3);
-    font-size: 2rem;
-    width: 100%;
-    padding: 20vh 0 20vh 0;
-}
-
-.uertekdetails{
-    padding: 10px;
-    width: 100%;
-}
-
-select {
-    background-color: var(--szin3);
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-    color: var(--szin4);
-    font-size: 1rem;
-    margin: 5px;
-}
-
-table {
-    border-radius: 13px;
-    overflow: hidden;
-}
-
-summary {
-    cursor: pointer;
-}
-
-
-.firstrow {
-    background-color: #362f4b !important;
-    color: #ffffff !important;
-}
-
-
-.container {
-    display: table;
-
-}
-
-tr {
-    background-color: #ffffff;
-    color: #737373;
-}
-
-tr:nth-child(odd) {
-    background-color: #f6f6f6;
-}
-
-td {
-    padding: 20px;
-}
-
-
-
-/* #endregion */
-
-/* #region figures */
 
 .cards {
-    margin: 80px 80px;
     padding: 3vw;
     width: 100%;
     display: grid;
@@ -563,7 +413,7 @@ figure {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     width: 100%;
     height: 100%;
     position: relative;
@@ -572,21 +422,27 @@ figure {
 }
 
 figure:hover {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
 figure figcaption {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     position: absolute;
+    padding: 1rem;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    color: white;
+    color: var(--szin4);
     background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(calc(100% - 2rem));
+    box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+    transform: translateY(calc(100% - 4rem));
     transition: transform 250ms ease;
+    
 }
 
 figure:hover figcaption {
@@ -600,14 +456,15 @@ figure h1 {
     left: 1rem;
     margin: 0;
     padding: 0;
-    color: var(--szin4);
-    font-size: 60px;
-    font-weight: 100;
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
     line-height: 1;
     opacity: 1;
     transform: scale(1);
     transition: 0.25s ease;
-    z-index: 999;
+    z-index: 50;
+    text-shadow: 1px 1px 5px black;
 }
 
 
@@ -633,6 +490,7 @@ figure img {
     width: 100%;
     z-index: -10;
     transition: 0.25s;
+    
 }
 
 figure:hover img {
@@ -666,7 +524,126 @@ figure figcaption button {
 
 /* #endregion figures */
 
+
+/* #region kalkulator */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 7rem 7rem;
+    max-width: 50%;
+    padding: 0px 5vw 0px 0px;
+}
+
+label {
+    text-align: center;
+}
+
+.banner {
+    border-top: 1rem solid var(--szin2);
+    text-align: center;
+    position: absolute;
+    top: 18vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+
+#kalkulator .banner{
+    top: 14vh;
+}
+
+#kalkulator {
+    min-height: 100vh;
+    justify-content: flex-end;
+    /* background-color: #2b2121; */
+    font-size: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+
+
+/* #endregion */
+
+
+
+/* #region uertektablazat */
+
+#uertektablazat {
+    position: relative;
+    gap: 5vh;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--szin3);
+    font-size: 2rem;
+    width: 100%;
+    padding: 20vh 0 20vh 0;
+}
+
+#uertekbanner{
+    text-align: center;
+}
+
+.uertekdetails{
+    gap: 3rem;
+    padding-top: 4rem;
+    width: 100%;
+}
+
+select {
+    background-color: var(--szin3);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    color: var(--szin4);
+    font-size: 1rem;
+}
+
+table {
+    margin: auto;
+    border-radius: 13px;
+    overflow: hidden;
+    max-width: 92%;
+}
+
+summary {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.firstrow {
+    background-color: #362f4b !important;
+    color: #ffffff !important;
+}
+
+.container {
+    display: table;
+
+}
+
+tr {
+    background-color: #ffffff;
+    color: #737373;
+}
+
+tr:nth-child(odd) {
+    background-color: #d9d9d9;
+}
+
+td {
+    padding: 0.2em;
+}
+/* #endregion */
+
+
 .gg-chevron-double-down {
+    margin-top: 1rem;
     transform: scale(var(--ggs, 5));
 }
 
@@ -690,10 +667,17 @@ figure figcaption button {
     align-items: center;
 }
 
-/* #region mediaquery */
 
-/* kovetkezo media query 1100 tól */
+
+/* #region mediaquery */
 @media (max-width: 1300px) {
+
+    #homePage {
+        padding-top: calc(15vh + 10vh);
+    }
+
+
+
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -705,7 +689,6 @@ figure figcaption button {
 
     form {
         margin: unset;
-
         padding: unset;
     }
 
@@ -736,7 +719,7 @@ figure figcaption button {
     .menumobile {
         position: fixed;
         right: 0px;
-        top: 5.94vh;
+        top: 8vh;
         max-height: 75%;
         width: 100%;
         display: flex;
@@ -753,10 +736,12 @@ figure figcaption button {
     }
 
     #menu.menushown {
-        transform: translateX(0%);
+        transform: translateX(55%);
     }
 
-    .menupoint {
+    .menupoint a{
+        width: 100%;
+        height: 100%;
         padding: 5vh;
     }
 
@@ -764,76 +749,79 @@ figure figcaption button {
         display: none;
     }
 
+    .flexrow{
+        justify-content: center;
+    }
 
 
+    .TelEmail {
+        flex-direction: column;
+        gap: 0vh;
+    }
+
+    /* figure:hover figcaption {
+        transform: translateY(55%);
+    } */
 }
 
 
 @media (max-width: 768px) {
+    .logo{
+        margin-left: 25px;
+    }
+
+    #intro{
+        font-size: 1.5rem;
+    }
+
+    #kalkulator{
+        padding-top: calc(15vh + 10vh);
+    }
+
+    #uertektablazat{
+        padding-top: calc(15vh + 10vh);
+    }
+
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
 
-
-    nav {
-        display: flex;
-        position: fixed;
-    }
-
-    #hamburger-lines {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.3rem;
-    }
-
-    .menupoints {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #menu {
-        display: flex;
-        z-index: 79;
-        text-align: center;
-        background-color: #90B77D;
-    }
-
-    .menumobile {
-        position: fixed;
-        right: 0px;
-        top: 5.94vh;
-        max-height: 75%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.5s ease-in-out;
-        z-index: 79;
-        transform: translateX(100%);
-        text-align: center;
-        background-color: #90B77D;
-    }
-
-    .menu-button {
-        margin-right: 5vw;
+    figure{
+        width: 80%;
     }
 
     #menu.menushown {
         transform: translateX(0%);
-    }
-
-    .menupoint {
-        padding: 5vh;
-    }
-
-    .parallax2 {
-        display: none;
     }
 
     form {
         border: unset;
     }
 
-}
+    table{
+        font-size: 1.5rem;
+    }
+    
+    #fixedtelephone{
+        position: fixed;
+        bottom: 3vh;
+        left: 3vw;
+        z-index: 110;
+    }
 
+    #fixedtelephone a{
+        line-height: 1em;
+        font-size: 2.5rem;
+    }
+
+    #tajekoztato{
+        top: 8vh;
+        max-height: fit-content;
+        font-size: 1.5rem;
+    }
+
+    /* figure:hover figcaption {
+        transform: translateY(5%);
+    } */
+}
 /* #endregion */

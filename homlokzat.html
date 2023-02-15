@@ -15,10 +15,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="https://cdn.discordapp.com/attachments/577197842716688415/1075110971586138212/logokaklanaf.png"
-                alt="">
-            <h1><a href="#">ProPurhab</a></h1>
-
+            <h1>ProPurhab</h1>
         </div>
         <div class="menu-button">
             <div id="hamburger-lines" onclick="openmenu()">
@@ -30,10 +27,7 @@
                 <div class="icons"></div>
                 <div class="menupoints">
                     <div class="menupoint active">
-                        <li><a href="#">Főoldal</a></li>
-                    </div>
-                    <div class="menupoint">
-                        <li><a href="#homePage">Purhabszigetelés</a></li>
+                        <li><a href="#">Purhabszigetelés</a></li>
                     </div>
 
                     <div class="menupoint">
@@ -44,30 +38,23 @@
                         <li><a href="#uertektablazat">U-értékek</a></li>
                     </div>
 
-                    <!-- <div class="menupoint">
+                    <div class="menupoint">
                         <li><a href="#">Referenciák</a></li>
-                    </div> -->
+                    </div>
 
                     <div class="menupoint">
-                        <li><a href="#bottom">Kapcsolat</a></li>
+                        <li><a href="#">Kapcsolat</a></li>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div id="fixedtelephone">
-        <a href="tel:+06205503231"><i class="fa fa-phone-square"></i></a>
-    </div>
     <div class="starterpage">
         <div class="parallax">
             <!-- <div class="kapcsolat">06305508843</div> -->
         </div>
         <div id="intro">
-            <h1>Hívjon minket, vagy keressen E-Mailben</h1>
-            <div class="TelEmail">
-                <a href="tel:+06305508843"><h1>+06 30 550 8843</h1></a>
-                <h1>propurhab@gmail.com</h1>
-            </div>
+            <h1>Vezetők a minőségben</h1>
             <i class="gg-chevron-double-down"></i>
         </div>
 
@@ -75,12 +62,11 @@
 
     <main>
         <section id="homePage" class="flexcol">
-            <h1 class="purhabszigeteles banner">Bemutató</h1>
+            <h1 class="purhabszigeteles banner">Bemutató szöveg</h1>
             <div class="cards">
                 <figure id="card1">
-                    <img src="https://cdn.discordapp.com/attachments/577197842716688415/1073598315595309176/Nyitottcellas.png"
-                        alt="">
-                    <h1>Nyitott cellás purhab</h1>
+                    <img src="img/bilak1.jpg" alt="">
+                    <h1>Cellás</h1>
                     <figcaption>
                         <h3>
                             Bővebben
@@ -95,9 +81,8 @@
                     </figcaption>
                 </figure>
                 <figure id="card2">
-                    <img src="https://cdn.discordapp.com/attachments/577197842716688415/1073601948437205102/zartcellas.png"
-                        alt="">
-                    <h1>Zárt cellás purhab</h1>
+                    <img src="img/bilak2.jpg" alt="">
+                    <h1>Cellás</h1>
                     <figcaption>
                         <h3>
                             Bővebben
@@ -112,9 +97,8 @@
                     </figcaption>
                 </figure>
                 <figure id="card3">
-                    <img src="https://cdn.discordapp.com/attachments/607902848155648020/1073607261705994250/laposteto.png"
-                        alt="">
-                    <h1>Lapostető szigetelés purhabbal</h1>
+                    <img src="img/bilak3.jpg" alt="">
+                    <h1>Cellás</h1>
                     <figcaption>
                         <h3>
                             Bővebben
@@ -129,9 +113,8 @@
                     </figcaption>
                 </figure>
                 <figure id="card4">
-                    <img src="https://cdn.discordapp.com/attachments/547842702679474225/1073629194367545535/kenheto_sziheteles.png"
-                        alt="">
-                    <h1>Kenhető szigetelés</h1>
+                    <img src="img/bilak4.jpg" alt="">
+                    <h1>Cellás</h1>
                     <figcaption>
                         <h3>
                             Bővebben
@@ -154,26 +137,25 @@
                     <label for="kobmeter">Négyzetméter</label>
                     <input type="number" name="kobmeter" id="kobmeter" value="50" min="50">
                     <label for="thickness">Vastagság</label>
-                    <input type="number" name="thickness" id="thickness" value="1" min="1" max="">
+                    <input type="number" name="thickness" id="thickness" value="1" min="1">
                     <label for="material">Válasszon tetszőleges anyagot:</label>
                     <select id="material" name="material">
-                        <option id="nyitott" value="800;23" selected>Nyitott cellás</option>
-                        <option id="zartfelkemeny" value="1200;34">Zárt cellás félkemény</option>
-                        <option id="zartkemeny" value="1700;34">Zárt cellás kemény</option>
+                        <option id="nyitott" value="800" selected>Nyitott cellás</option>
+                        <option id="zartfelkemeny" value="1200">Zárt cellás félkemény</option>
+                        <option id="zartkemeny" value="1700">Zárt cellás kemény</option>
                     </select>
-                    <input type="text" readonly name="uertek" id="uertek">
-                    <input type="text" readonly name="osszeg" id="osszeg">
+                    <input type="number" readonly name="uertek" id="uertek">
+                    <input type="number" readonly name="osszeg" id="osszeg">
 
 
-                    <input type="button" onclick="CalcAndUnhide()" value="Számítás">
-                    <h2 id="tajekoztato" onclick="ClosePopup()">A fenti ár nem árajánlat, csak egy hozzávetőleges
-                        kalkuláció. Pontos árat csak a helyszini felmérés után tudunk adni.</h2>
+                    <input type="button" onclick="Calc()" value="Számítás">
+
                 </form>
                 <div class="parallax2"></div>
             </div>
         </section>
         <section id="uertektablazat" class="flexcol">
-            <h1 id="uertekbanner">Egyes építőanyagok hővezetési tényezői (tájékoztató értékek)</h1>
+            <h1 id="uertekbanner" class="banner">Egyes építőanyagok hővezetési tényezői (tájékoztató értékek)</h1>
             <div class="uertekdetails flexcol">
                 <!-- λ [W/mK] -->
                 <details>
@@ -528,23 +510,13 @@
 
 
     <footer>
-        <div class="kapcsolat">
-            <h1>Kapcsolat</h1>
-            <div class="flexcol">
-                <a href="tel:+06305508843"><i class="fa fa-phone-square"></i>+06 30 550 8843</a>
-                <a href="tel:+06307200911"><i class="fa fa-phone-square"></i>+06 30 720 0911</a>
-                <a href=""><i class="fa fa-envelope-square"></i>propurhab@gmail.com</a>
-                <a href=""><i class="fa fa-map-marker"></i>Nógrád Vármegye és környéke</a>
-            </div>
-        </div>
-
+        <div class="teszt">KERESSEN FEL MINKET!</div>
         <div class="socials">
             <a target="_blank" href="https://www.facebook.com/propurhab"><i class="fa fa-facebook-official"></i></a>
-            <a href=""><i class="fa fa-twitter-square"></i></a>
-            </i><a href=""><i class="fa fa-youtube-play"></i></a>
+            <i class="fa fa-twitter-square"></i>
+            <i class="fa fa-youtube-play"></i>
         </div>
     </footer>
-    <div id="bottom"></div>
 </body>
 
 </html>
